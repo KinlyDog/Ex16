@@ -10,8 +10,8 @@ public class Level1 {
             }
 
             if (k != -1) {
-                expStr.deleteCharAt(k);
                 delChars += expStr.charAt(k);
+                expStr.deleteCharAt(k);
             }
 
             String string = expStr.toString();

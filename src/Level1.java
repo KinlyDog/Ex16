@@ -18,7 +18,9 @@ public class Level1 {
             StringBuilder strBld = new StringBuilder();
 
             for (int i = 0; i < string.length(); i++) {
-                if (strBld.indexOf(String.valueOf(string.charAt(i))) == -1) {
+                String tmp = String.valueOf(string.charAt(i));
+
+                if (strBld.indexOf(tmp) == -1) {
                     strBld.append(string.charAt(i));
                 }
             }

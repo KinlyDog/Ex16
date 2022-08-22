@@ -6,7 +6,7 @@ public class Level1 {
             StringBuilder expStr = new StringBuilder(s);
 
             if (k != -1 && delChars.contains(String.valueOf(expStr.charAt(k)))) {
-                break;
+                continue;
             }
 
             if (k != -1) {

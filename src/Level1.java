@@ -1,16 +1,16 @@
 public class Level1 {
     public static boolean SherlockValidString(String s) {
-        String delChars = "";
+        StringBuilder delChar = new StringBuilder();
 
         for (int k = -1; k < s.length(); k++) {
             StringBuilder expStr = new StringBuilder(s);
 
-            if (k != -1 && delChars.contains(String.valueOf(expStr.charAt(k)))) {
+            if (k != -1 && delChar.indexOf(String.valueOf(expStr.charAt(k))) != -1) {
                 continue;
             }
 
             if (k != -1) {
-                delChars += expStr.charAt(k);
+                delChar.append(expStr.charAt(k));
                 expStr.deleteCharAt(k);
             }
 
